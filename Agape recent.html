@@ -4,195 +4,298 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Agapeland Daycare</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-/* Basic CSS for demonstration purposes */
 body {
-font-family: Arial, sans-serif;
-margin: 0;
-padding: 0;
-line-height: 1.6;
+font-family: 'Inter', sans-serif;
 }
-.container {
-max-width: 1100px;
-margin: auto;
-overflow: hidden;
-padding: 0 20px;
+/* Custom scrollbar for a touch of style */
+::-webkit-scrollbar {
+width: 10px;
 }
-header {
-background: #333;
-color: #fff;
-padding: 1rem 0;
-text-align: center;
+::-webkit-scrollbar-track {
+background: #f1f1f1;
 }
-header .logo {
-font-size: 2rem;
-font-weight: bold;
-}
-nav ul {
-list-style: none;
-padding: 0;
-}
-nav ul li {
-display: inline;
-margin: 0 15px;
-}
-nav a {
-color: #fff;
-text-decoration: none;
-}
-.hero {
-background: #f4f4f4;
-padding: 4rem 0;
-text-align: center;
-}
-.hero h1 {
-font-size: 3rem;
-color: #333;
-}
-.hero .btn {
-display: inline-block;
-background: #ff6347;
-color: #fff;
-padding: 10px 20px;
-text-decoration: none;
+::-webkit-scrollbar-thumb {
+background: #888;
 border-radius: 5px;
 }
-.section {
-padding: 2rem 0;
-}
-.section h2 {
-text-align: center;
-font-size: 2.5rem;
-color: #333;
-}
-.about-content, .programs-list, .testimonials-list, .contact-info {
-display: flex;
-justify-content: space-around;
-flex-wrap: wrap;
-}
-.program-item, .testimonial-item {
-width: 30%;
-margin-bottom: 20px;
-background: #eee;
-padding: 15px;
-text-align: center;
-}
-form {
-max-width: 600px;
-margin: auto;
-}
-form input, form textarea {
-width: 100%;
-padding: 10px;
-margin-bottom: 10px;
-}
-footer {
-background: #333;
-color: #fff;
-text-align: center;
-padding: 1rem 0;
+::-webkit-scrollbar-thumb:hover {
+background: #555;
 }
 </style>
 </head>
-<body>
+<body class="bg-yellow-50 text-gray-800">
 
-<header>
-<div class="container">
-<div class="logo">Agapeland Daycare</div>
-<nav>
-<ul>
-<li><a href="#about">About Us</a></li>
-<li><a href="#programs">Programs</a></li>
-<li><a href="#testimonials">Testimonials</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
+<header class="bg-white shadow-lg sticky top-0 z-50">
+<nav class="container mx-auto p-4 flex justify-between items-center flex-wrap">
+<a href="#" class="flex items-center space-x-2 text-2xl font-bold text-blue-600">
+<img src="https://placehold.co/40x40/60a5fa/ffffff?text=👶" alt="Daycare Logo" class="rounded-full">
+<span>Agapeland Daycare</span>
+</a>
+<div class="hidden md:flex space-x-6 font-semibold">
+<a href="#about" class="hover:text-blue-600 transition duration-300">About Us</a>
+<a href="#program-details" class="hover:text-blue-600 transition duration-300">Programs & Activities</a>
+<a href="#documents" class="hover:text-blue-600 transition duration-300">Documents</a>
+<a href="#contact" class="hover:text-blue-600 transition duration-300">Contact</a>
+</div>
+<div class="md:hidden">
+<button id="mobile-menu-button" class="text-gray-600 hover:text-blue-600 focus:outline-none">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+</svg>
+</button>
+</div>
 </nav>
+<div id="mobile-menu" class="hidden md:hidden bg-white px-4 pb-4 shadow-inner">
+<a href="#about" class="block py-2 text-gray-800 hover:bg-blue-100 rounded-lg transition duration-300">About Us</a>
+<a href="#program-details" class="block py-2 text-gray-800 hover:bg-blue-100 rounded-lg transition duration-300">Programs & Activities</a>
+<a href="#documents" class="block py-2 text-gray-800 hover:bg-blue-100 rounded-lg transition duration-300">Documents</a>
+<a href="#contact" class="block py-2 text-gray-800 hover:bg-blue-100 rounded-lg transition duration-300">Contact</a>
 </div>
 </header>
 
 <main>
-<section class="hero">
-<div class="container">
-<h1>Where Love Grows and Children Flourish</h1>
-<p>Providing a safe, nurturing, and educational environment for your little ones.</p>
-<a href="#contact" class="btn">Enroll Now</a>
+<section class="bg-blue-600 text-white py-20 px-4 md:py-32 text-center rounded-b-[50px] shadow-2xl relative overflow-hidden">
+<div class="absolute inset-0">
+<img src="https://placehold.co/1920x1080/a5d6a7/424242?text=Happy+Kids+Learning" alt="Kids playing" class="w-full h-full object-cover opacity-30">
+</div>
+<div class="container mx-auto relative z-10">
+<h1 class="text-4xl md:text-6xl font-extrabold mb-4 animate-fade-in-up">Welcome to Agapeland Daycare</h1>
+<p class="text-lg md:text-xl font-light mb-8 max-w-2xl mx-auto animate-fade-in">A place where little hearts and minds flourish with "Agape" love.</p>
+<a href="#contact" class="bg-white text-blue-600 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-gray-100 transition duration-300 transform hover:scale-105">Enroll Now</a>
 </div>
 </section>
 
-<section id="about" class="section">
-<div class="container">
-<h2>About Agapeland Daycare</h2>
-<div class="about-content">
-<p>Agapeland Daycare is a place built on the foundation of 'agape' - unconditional love. We believe that every child is a unique gift from God and deserves a loving and supportive environment to grow. Our curriculum is designed to foster spiritual, cognitive, social, and physical development through play-based learning and Christ-centered principles.</p>
+<section id="about" class="py-20 px-4 md:px-8">
+<div class="container mx-auto">
+<h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-blue-800">About Agapeland</h2>
+<div class="flex flex-col md:flex-row items-center gap-10 mb-12">
+<div class="md:w-1/2">
+<img src="https://placehold.co/800x600/a5d6a7/424242?text=Caring+Educators" alt="Educators with kids" class="rounded-3xl shadow-xl transform hover:scale-105 transition duration-500">
+</div>
+<div class="md:w-1/2">
+<p class="text-lg mb-4">
+At Agapeland Daycare, we are dedicated to providing a nurturing, safe, and stimulating environment for your child's growth. Our philosophy is rooted in the concept of "agape," a Greek word for unconditional love.
+</p>
+<p class="text-lg mb-4">
+We believe every child is a unique and precious gift. Our experienced educators create engaging activities and a curriculum designed to foster social, emotional, physical, and cognitive development. We celebrate diversity and encourage kindness, empathy, and a lifelong love of learning.
+</p>
+</div>
+</div>
+
+<div id="program-details" class="mt-20">
+<h3 class="text-2xl md:text-3xl font-bold mb-8 text-blue-800 text-center">Our Programs and Activities (Click to see more!)</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+<div class="program-card bg-white p-6 rounded-3xl shadow-lg border border-blue-200 cursor-pointer hover:shadow-xl transition duration-300"
+data-title="Infant Care Activities"
+data-image="https://placehold.co/600x400/ffe082/424242?text=Sensory+Play"
+data-activities="Tummy Time (strengthening neck/core), Sensory Baskets (exploring textures), Basic Sign Language, Soft Music & Cuddles, Tracking Objects.">
+<img src="https://placehold.co/600x400/ffe082/424242?text=Infant+Care" alt="Infant Care" class="w-full h-48 object-cover rounded-2xl mb-4">
+<h4 class="text-xl font-bold text-blue-800 mb-2">Infant Care (0-18 months)</h4>
+<p class="text-gray-700">A warm and gentle environment focused on building trust and sensory exploration. **Click to view activities!**</p>
+</div>
+
+<div class="program-card bg-white p-6 rounded-3xl shadow-lg border border-blue-200 cursor-pointer hover:shadow-xl transition duration-300"
+data-title="Toddler Program Activities"
+data-image="https://placehold.co/600x400/b3e5fc/424242?text=Toddler+Creative+Play"
+data-activities="Simple Puzzles & Shape Sorting, Creative Art with Finger Paints, Outdoor Playground Time, Singing and Rhyming Games, Learning Colors & Numbers.">
+<img src="https://placehold.co/600x400/b3e5fc/424242?text=Toddler+Play" alt="Toddler Program" class="w-full h-48 object-cover rounded-2xl mb-4">
+<h4 class="text-xl font-bold text-blue-800 mb-2">Toddler Program (18-36 months)</h4>
+<p class="text-gray-700">Engaging activities that encourage independence, language development, and social skills. **Click to view activities!**</p>
+</div>
+
+<div class="program-card bg-white p-6 rounded-3xl shadow-lg border border-blue-200 cursor-pointer hover:shadow-xl transition duration-300"
+data-title="Pre-School Care Activities"
+data-image="https://placehold.co/600x400/c5e1a5/424242?text=Preschool+Art"
+data-activities="Themed Art Projects (e.g., seasons), Simple Science Experiments, Circle Time & Storytelling, Introduction to Letters (Phonics), Building & Construction Centers.">
+<img src="https://placehold.co/600x400/c5e1a5/424242?text=Preschool+Activities" alt="Preschool Program" class="w-full h-48 object-cover rounded-2xl mb-4">
+<h4 class="text-xl font-bold text-blue-800 mb-2">Pre-School Care: 3-4 years</h4>
+<p class="text-gray-700">Structured curriculum to build foundational literacy and numeracy skills. **Click to view activities!**</p>
+</div>
+
+<div class="program-card bg-white p-6 rounded-3xl shadow-lg border border-blue-200 cursor-pointer hover:shadow-xl transition duration-300"
+data-title="Pre-Kinder Care Activities"
+data-image="https://placehold.co/600x400/ffccbc/424242?text=Pre-Kinder+Learning"
+data-activities="Advanced Phonics & sight words, Introduction to basic addition/subtraction, Role-playing & dramatic scenarios, Handwriting practice, Collaborative problem-solving.">
+<img src="https://placehold.co/600x400/ffccbc/424242?text=Pre-Kinder+Prep" alt="Pre-Kinder Program" class="w-full h-48 object-cover rounded-2xl mb-4">
+<h4 class="text-xl font-bold text-blue-800 mb-2">Pre-Kinder Care: 4-5 years</h4>
+<p class="text-gray-700">Focused on kindergarten readiness with strengthened academic skills. **Click to view activities!**</p>
+</div>
+
+<div class="program-card bg-white p-6 rounded-3xl shadow-lg border border-blue-200 cursor-pointer hover:shadow-xl transition duration-300"
+data-title="OSC Activities"
+data-image="https://placehold.co/600x400/d1c4e9/424242?text=After+School+Fun"
+data-activities="Homework Club (with support), Organized Sports & Games, Cooking/Baking projects, Board Games & Puzzles, Chill Zone for reading/quiet time, Community field trips.">
+<img src="https://placehold.co/600x400/d1c4e9/424242?text=Out+of+School+Care" alt="Out-of-School Care" class="w-full h-48 object-cover rounded-2xl mb-4">
+<h4 class="text-xl font-bold text-blue-800 mb-2">OSC</h4>
+<p class="text-gray-700">A safe and fun after-school environment with homework support and recreation. **Click to view activities!**</p>
+</div>
+
+<div class="program-card bg-white p-6 rounded-3xl shadow-lg border border-blue-200 cursor-pointer hover:shadow-xl transition duration-300"
+data-title="General Daily Activities"
+data-image="https://placehold.co/600x400/ffcc80/424242?text=Outdoor+Play"
+data-activities="Outdoor Free Play, Nutritious Snack Time, Structured Movement & Music, Guided Story Time, Nap/Quiet Time, Messy Play (sand/water tables).">
+<img src="https://placehold.co/600x400/ffcc80/424242?text=Playful+Activities" alt="Activities" class="w-full h-48 object-cover rounded-2xl mb-4">
+<h4 class="text-xl font-bold text-blue-800 mb-2">Daily Activities</h4>
+<p class="text-gray-700">Our day is filled with a variety of engaging, balanced activities. **Click to view activities!**</p>
+</div>
+
+</div>
+</div>
+
+</div>
+</section>
+
+<section id="documents" class="bg-white py-20 px-4 md:px-8 rounded-t-[50px] shadow-inner">
+<div class="container mx-auto text-center">
+<h2 class="text-3xl md:text-4xl font-bold mb-12 text-blue-800">Download Important Documents</h2>
+<p class="mb-10 text-lg text-gray-700 max-w-3xl mx-auto">
+Access our enrollment forms and key safety policies below. Click the links to download the relevant PDF files.
+</p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+
+<div class="bg-blue-100 p-6 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 md:col-span-1 md:col-start-1">
+<div class="text-5xl mb-4 text-red-600">📄</div>
+<h3 class="text-xl font-bold mb-2 text-blue-800">Registration Form</h3>
+<p class="text-gray-700 mb-4 text-sm">Required form to enroll your child.</p>
+<a href="/path/to/registration_form.pdf" download="Agapeland_Registration_Form" class="inline-block bg-blue-600 text-white font-semibold py-2 px-4 rounded-full hover:bg-blue-700 transition duration-300">
+Download PDF
+</a>
+</div>
+
+<div class="bg-blue-100 p-6 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 md:col-span-1 md:col-start-3">
+<div class="text-5xl mb-4 text-green-600">🚨</div>
+<h3 class="text-xl font-bold mb-2 text-blue-800">First Aid Policy PDF</h3>
+<p class="text-gray-700 mb-4 text-sm">Our comprehensive safety and emergency procedures.</p>
+<a href="/path/to/first_aid_policy.pdf" download="Agapeland_First_Aid_Policy" class="inline-block bg-blue-600 text-white font-semibold py-2 px-4 rounded-full hover:bg-blue-700 transition duration-300">
+Download PDF
+</a>
+</div>
 
 </div>
 </div>
 </section>
 
-<section id="programs" class="section">
-<div class="container">
-<h2>Our Programs</h2>
-<div class="programs-list">
-<div class="program-item">
-<h3>Infant Program</h3>
-<p>Nurturing care for babies from 6 weeks to 18 months.</p>
-</div>
-<div class="program-item">
-<h3>Toddler Program</h3>
-<p>Engaging activities for curious minds from 18 months to 3 years.</p>
-</div>
-<div class="program-item">
-<h3>Preschool Program</h3>
-<p>Preparing children for kindergarten with a comprehensive curriculum.</p>
-</div>
-</div>
-</div>
-</section>
+<section id="contact" class="py-20 px-4 md:px-8">
+<div class="container mx-auto">
+<h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-blue-800">Contact Us</h2>
+<div class="max-w-2xl mx-auto bg-white p-12 rounded-3xl shadow-xl text-center">
 
-<section id="testimonials" class="section">
-<div class="container">
-<h2>What Parents Say</h2>
-<div class="testimonials-list">
-<div class="testimonial-item">
-<p>"Agapeland has been a true blessing for our family. Our son loves coming here every day!"</p>
-<small>- Jane D.</small>
-</div>
-<div class="testimonial-item">
-<p>"The staff is wonderful and caring. We feel so secure knowing our daughter is in such good hands."</p>
-<small>- Mark S.</small>
-</div>
-<div class="testimonial-item">
-<p>"The Christ-centered environment is exactly what we were looking for. Highly recommend!"</p>
-<small>- Sarah L.</small>
-</div>
-</div>
-</div>
-</section>
+<p class="text-lg font-semibold text-blue-800 mb-6">Reach out to us directly via phone or email, or visit us at our location.</p>
 
-<section id="contact" class="section">
-<div class="container">
-<h2>Contact Us</h2>
-<form action="#" method="POST">
-<input type="text" name="name" placeholder="Your Name" required>
-<input type="email" name="email" placeholder="Your Email" required>
-<textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-<button type="submit" class="btn">Send Message</button>
-</form>
-<div class="contact-info" style="margin-top: 20px;">
-<p><strong>Phone:</strong> 780-986-1632</p>
-<p><strong>Email:</strong> agapekids@shaw.ca</p>
-<p><strong>Address:</strong>4302 50 St, Leduc, AB T9E 1M7</p>
+<div class="space-y-4">
+<p class="text-xl font-semibold text-blue-800">Our Location</p>
+<p class="text-gray-700 text-lg">16-4302 50 St, Leduc, AB T9E 6J9</p>
+</div>
+
+<div class="border-t border-gray-200 my-8"></div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div>
+<p class="text-xl font-semibold text-blue-800">Phone</p>
+<a href="tel: 780-986-1632" class="text-gray-700 text-lg hover:text-blue-600">780-986-1632</a>
+</div>
+<div>
+<p class="text-xl font-semibold text-blue-800">Email</p>
+<a href="mailto: agapekids@shaw.ca" class="text-gray-700 text-lg hover:text-blue-600">agapekids@shaw.ca</a>
+</div>
+</div>
+
 </div>
 </div>
 </section>
 </main>
 
-<footer>
-<div class="container">
-<p>&copy; 2025 Agapeland Daycare. All rights reserved.</p>
-<p>Follow us on <a href="#">Facebook</a> and <a href="#">Instagram</a></p>
+<div id="program-modal" class="fixed inset-0 bg-gray-900 bg-opacity-75 hidden z-[100] items-center justify-center p-4">
+<div class="bg-white rounded-3xl max-w-2xl w-full p-8 shadow-2xl relative">
+<button id="close-modal" class="absolute top-4 right-4 text-gray-500 hover:text-gray-800 focus:outline-none text-2xl font-bold">
+&times;
+</button>
+<h3 id="modal-title" class="text-3xl font-bold text-blue-800 mb-6 border-b pb-2"></h3>
+<div class="md:flex md:space-x-6">
+<div class="md:w-1/2 mb-4 md:mb-0">
+<img id="modal-image" src="" alt="Program Activity" class="w-full rounded-2xl object-cover h-48">
+<p class="text-sm text-gray-500 mt-2 text-center">Children engaged in the activity.</p>
+</div>
+<div class="md:w-1/2">
+<p class="text-lg font-semibold text-gray-700 mb-3">Key Activities:</p>
+<ul id="modal-activities" class="list-disc list-inside space-y-2 text-gray-800">
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+
+<footer class="bg-blue-800 text-white text-center py-6">
+<div class="container mx-auto">
+<p>&copy; 2023 Agapeland Daycare. All rights reserved.</p>
 </div>
 </footer>
+
+<script>
+// Mobile Menu Toggler
+const mobileMenuButton = document.getElementById('mobile-menu-button');
+const mobileMenu = document.getElementById('mobile-menu');
+
+mobileMenuButton.addEventListener('click', () => {
+mobileMenu.classList.toggle('hidden');
+});
+
+// Program Modal Logic
+const programCards = document.querySelectorAll('.program-card');
+const modal = document.getElementById('program-modal');
+const closeModalButton = document.getElementById('close-modal');
+const modalTitle = document.getElementById('modal-title');
+const modalImage = document.getElementById('modal-image');
+const modalActivities = document.getElementById('modal-activities');
+
+programCards.forEach(card => {
+card.addEventListener('click', () => {
+// Get data from the clicked card
+const title = card.getAttribute('data-title');
+const imageSrc = card.getAttribute('data-image');
+const activities = card.getAttribute('data-activities');
+
+// Populate the modal
+modalTitle.textContent = title;
+modalImage.src = imageSrc;
+modalImage.alt = title;
+
+// Clear previous activities and insert new ones
+modalActivities.innerHTML = '';
+const activityList = activities.split(', ');
+activityList.forEach(activity => {
+const listItem = document.createElement('li');
+listItem.textContent = activity;
+modalActivities.appendChild(listItem);
+});
+
+// Show the modal
+modal.classList.remove('hidden');
+modal.classList.add('flex');
+});
+});
+
+// Close modal when close button is clicked
+closeModalButton.addEventListener('click', () => {
+modal.classList.add('hidden');
+modal.classList.remove('flex');
+});
+
+// Close modal when clicking outside the modal content
+modal.addEventListener('click', (e) => {
+if (e.target === modal) {
+modal.classList.add('hidden');
+modal.classList.remove('flex');
+}
+});
+</script>
 
 </body>
 </html>
